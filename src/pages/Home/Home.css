@@ -1,0 +1,143 @@
+.hero-section {
+  background-size: 110%; /* zoom starts slightly larger */
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+
+  /* Background Zoom Animation */
+  animation: bgZoom 3s ease-in-out forwards;
+  will-change: background-size;
+  background-attachment: scroll; /* for parallax effect */
+}
+
+@keyframes bgZoom {
+  0% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Text Animation */
+.animate-text {
+  animation: zoomIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e60000;
+}
+
+.scroll-down-arrow {
+  margin-top: 40px;
+  width: 30px;
+  height: 30px;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+}
+
+.curve-divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  transform: translateY(100%);
+}
+
+.curve-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+.hero-section {
+    background-attachment: scroll;
+  }
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+}
