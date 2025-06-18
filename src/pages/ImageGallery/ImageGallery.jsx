@@ -52,6 +52,7 @@ const ImageGallery = () => {
 
   return (
     <section className="inventory-gallery">
+      <h1>Our Success Stories</h1>
       <div className="gallery-grid">
         {images.map((url, index) => (
           <div

@@ -30,6 +30,36 @@ const vehicleData = [
     description2: "Cargo Body (Tray/Deck Size): 6.5 Feet",
     image: "/images/baxy-express-diesel-3.webp",
   },
+  {
+    
+     
+    title: "BAXY Bindaas Diesel",
+    description: "Engine: Greaves BSVI OBD II Engine",
+    description1: "Fuel: Diesel",
+    description2: "Cargo Body: 5.5 Feet",
+    image: "/images/baxy-super-cargo.webp",
+  
+  },
+    {
+    
+     
+    title: "BAXY Bindaas Diesel",
+    description: "Engine: Greaves BSVI OBD II Engine",
+    description1: "Fuel: Diesel",
+    description2: "Cargo Body: 5.5 Feet",
+    image: "/images/baxy-superking1.webp",
+  
+  },
+   {
+    
+     
+    title: "BAXY Bindaas Diesel",
+    description: "Engine: Greaves BSVI OBD II Engine",
+    description1: "Fuel: Diesel",
+    description2: "Cargo Body: 5.5 Feet",
+    image: "/images/Express_Auto.png",
+  
+  },
 ];
 
 const OurVehicles = () => {

@@ -6,8 +6,9 @@ import "./PopularModels.css";
 // import img4 from "./baxy-express-diesel-3.webp";
 
 const PopularModels = () => {
-  const models = [
-    {
+const models = [
+  {
+    id: 1,
     title: "BAXY Bindaas Diesel",
     description: "Engine: Greaves BSVI OBD II Engine",
     description1: "Fuel: Diesel",
@@ -15,6 +16,7 @@ const PopularModels = () => {
     image: "/images/bindaas-01.webp",
   },
   {
+    id: 2,
     title: "Baxy Express CNG",
     description: "Engine: G 400 W VI Bi Fuel CNG",
     description1: "Fuel: CNG",
@@ -22,6 +24,7 @@ const PopularModels = () => {
     image: "/images/baxy-express-cng.webp",
   },
   {
+    id: 3,
     title: "BAXY E Rath e-rickshaw",
     description: "Battery & Charger: 65 V DC 15A Axion SMPS",
     description1: "Sitting Capacity: 4 Passenger + Driver",
@@ -29,13 +32,16 @@ const PopularModels = () => {
     image: "/images/rath-2.png",
   },
   {
+    id: 4,
     title: "Baxy Super King CNG Cargo",
     description: "Engine: G 400 W VI Bi Fuel CNG",
     description1: "Fuel: CNG",
     description2: "Cargo Body (Tray/Deck Size): 6.5 Feet",
     image: "/images/baxy-express-diesel-3.webp",
   },
-  ];
+  
+];
+
 
   return (
     <div className="popular-models">

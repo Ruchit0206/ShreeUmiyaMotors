@@ -5,7 +5,7 @@ import aboutImage from './About.jpg'; // Replace with your actual image
 const AboutUs = () => {
   return (
     <div className="about-container">
-      <h2>About Us</h2>
+      <h2><i className="fa-solid fa-forward"></i> About Us</h2>
       <div className="about-content">
         <div className="about-text">
           

@@ -22,9 +22,7 @@ const Footer = () => {
           <h4><strong>Our Locations</strong></h4>
 
           <p>
-           <strong style={{color:"yellow",fontSize:"large"}}>Gandhinagar Branch:</strong><br />
-            Near Sargasan Cross Road, Opp. Bharat Petroleum, Gandhinagar, Gujarat - 382421{' '}
-            <a 
+           <strong style={{color:"yellow",fontSize:"large"}}>Gandhinagar Branch:  <a 
               href="https://maps.app.goo.gl/9z6PL2zK3FTGi9Mq8" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -32,13 +30,13 @@ const Footer = () => {
               title="View on Map"
             >
               <FaMapMarkerAlt />
-            </a>
+            </a></strong>
+            Near Sargasan Cross Road, Opp. Bharat Petroleum, Gandhinagar, Gujarat - 382421{' '}
+           
           </p>
 
           <p>
-            <strong style={{color:"yellow",fontSize:"large"}}>Himmatnagar Branch:</strong><br />
-            Nr. Bypass Road, Opp. ST Workshop, Himmatnagar, Gujarat - 383001{' '}
-            <a 
+            <strong style={{color:"yellow",fontSize:"large"}}>Himmatnagar Branch:  <a 
               href="https://maps.app.goo.gl/zhtkxfeLaQ69dHcu7"
               target="_blank" 
               rel="noopener noreferrer"
@@ -46,7 +44,9 @@ const Footer = () => {
               title="View on Map"
             >
               <FaMapMarkerAlt />
-            </a>
+            </a></strong>
+            Nr. Bypass Road, Opp. ST Workshop, Himmatnagar, Gujarat - 383001{' '}
+           
           </p>
         </div>
 
@@ -93,7 +93,16 @@ const Footer = () => {
 
 
       </div>
-      <p className="footer-bottom">Copyright © Shree Umiya Motors</p>
+      <p className="footer-bottom">© {new Date().getFullYear()} Shree Umiya Motors. All rights reserved.</p>
+    <p className='footer-bottom'>Designed & Developed by <a 
+  href="https://www.linkedin.com/in/ruchit-patel-7093b4257/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  style={{ textDecoration: "none", color: "blue" }}
+>
+  Ruchit Patel
+</a>
+</p>
     </footer>
   );
 };

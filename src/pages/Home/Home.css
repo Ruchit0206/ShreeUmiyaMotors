@@ -139,6 +139,10 @@
   transform: scale(1.1);
 }
 
+.scroll-section {
+  scroll-margin-top: 70px; /* Adjust based on your navbar height */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .hero-title {

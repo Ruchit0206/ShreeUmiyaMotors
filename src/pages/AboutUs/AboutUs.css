@@ -1,12 +1,12 @@
 .about-container {
   padding: 40px 15px; /* Reduced side padding */
-  background: white;
+  background: rgb(255, 255, 255);
   /* color:white; */
   width: 100%;
 }
 .about-container h2{
   font-size: 2.5rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .about-content {
