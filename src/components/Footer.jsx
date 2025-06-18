@@ -53,17 +53,10 @@ const Footer = () => {
         {/* Contact and Social Section */}
       
 <div className="footer-info">
-   <h4><strong>Inquire Us </strong></h4>
+   <h4><strong>Contact Us </strong></h4>
 
 
-  <div className="inquiry-box">
-    <label htmlFor="inquiry"></label>
-    <input
-      type="text"
-      id="inquiry"
-      placeholder="Enter your query..."
-    />
-  </div>
+ 
    <p>
             <FaPhoneAlt />
             <a href="tel:+919099981277" style={{ color: 'white', textDecoration: 'none', marginLeft: '10px' }}>
