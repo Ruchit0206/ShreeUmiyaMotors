@@ -1,69 +1,35 @@
-// import React from 'react';
-// import './OurVehicles.css';
-
-// const vehicleImages = [
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-//  "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png"
-// ];
-
-// const OurVehicles = () => {
-//   return (
-//     <div className="vehicles-wrapper">
-//       <h2 className="vehicles-title">Our Vehicles</h2>
-//       <p className="vehicles-subtitle">
-//         Explore our curated selection of vehicles, each meticulously inspected to ensure quality, reliability, and a touch of luxury.
-//       </p>
-//       <div className="vehicle-grid">
-//         {vehicleImages.map((img, index) => (
-//           <img key={index} src={img} alt={`Vehicle ${index + 1}`} className="vehicle-img" />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default OurVehicles;
-
-
-
 import React, { useState } from 'react';
 import './OurVehicles.css';
 
 const vehicleData = [
   {
-    img:"https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Bath Abbey",
-    desc: "A historic site representing timeless design and architectural beauty."
+    title: "BAXY Bindaas Diesel",
+    description: "Engine: Greaves BSVI OBD II Engine",
+    description1: "Fuel: Diesel",
+    description2: "Cargo Body: 5.5 Feet",
+    image: "/images/bindaas-01.webp",
   },
   {
-    img:"https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Country Chapel",
-    desc: "Perfectly preserved countryside chapel. Ideal for peaceful rides."
+    title: "Baxy Express CNG",
+    description: "Engine: G 400 W VI Bi Fuel CNG",
+    description1: "Fuel: CNG",
+    description2: "Sitting Capacity: D+3",
+    image: "/images/baxy-express-cng.webp",
   },
   {
-    img: "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Swaledale Valley",
-    desc: "Explore nature’s raw beauty with reliable vehicle options."
+    title: "BAXY E Rath e-rickshaw",
+    description: "Battery & Charger: 65 V DC 15A Axion SMPS",
+    description1: "Sitting Capacity: 4 Passenger + Driver",
+    description2: "Ground Clearance: 160 mm",
+    image: "/images/rath-2.png",
   },
   {
-    img: "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Montserrat Heights",
-    desc: "Tour-ready for elevated drives with scenic views."
+    title: "Baxy Super King CNG Cargo",
+    description: "Engine: G 400 W VI Bi Fuel CNG",
+    description1: "Fuel: CNG",
+    description2: "Cargo Body (Tray/Deck Size): 6.5 Feet",
+    image: "/images/baxy-express-diesel-3.webp",
   },
-  {
-    img: "https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Abbey Interior",
-    desc: "Interior comfort and visual elegance for every journey."
-  },
-  {
-    img:"https://pnggallery.com/wp-content/uploads/auto-rickshaw-02.png",
-    title: "Night Drive",
-    desc: "Smooth experience even after sunset — stylish and secure."
-  }
 ];
 
 const OurVehicles = () => {
@@ -83,11 +49,12 @@ const OurVehicles = () => {
       <p className="vehicles-subtitle">
         Explore our curated selection of vehicles, each meticulously inspected to ensure quality, reliability, and a touch of luxury.
       </p>
+
       <div className="vehicle-grid">
         {vehicleData.map((vehicle, index) => (
           <img
             key={index}
-            src={vehicle.img}
+            src={vehicle.image}
             alt={vehicle.title}
             className="vehicle-img"
             onClick={() => openModal(vehicle)}
@@ -99,9 +66,11 @@ const OurVehicles = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
-            <img src={selectedVehicle.img} alt={selectedVehicle.title} />
+            <img src={selectedVehicle.image} alt={selectedVehicle.title} />
             <h3>{selectedVehicle.title}</h3>
-            <p>{selectedVehicle.desc}</p>
+            <p>{selectedVehicle.description}</p>
+            <p>{selectedVehicle.description1}</p>
+            <p>{selectedVehicle.description2}</p>
             <button className="book-btn">Book Test Drive</button>
           </div>
         </div>

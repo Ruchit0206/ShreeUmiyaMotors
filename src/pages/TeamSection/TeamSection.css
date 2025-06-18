@@ -86,9 +86,11 @@
   .team-members {
     flex-direction: column;
     gap: 30px;
+    align-items: center; /* ✅ This will center the cards */
   }
 
   .team-card {
     width: 90%;
   }
 }
+

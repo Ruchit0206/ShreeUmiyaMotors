@@ -20,18 +20,18 @@ const Navbar = () => {
         {/* Right side menu */}
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav align-items-center">
-            <li className="nav-item"><a className="nav-link" href="/">Home</a></li>
-            <Link to="/services"><li className="nav-item"><a className="nav-link" href="/">Services</a></li></Link>
-           <Link to="/ourvehicles"> <li className="nav-item"><a className="nav-link" href="/">Pricing</a></li></Link>
+            <Link to="/" className='nav-link'><li className="nav-item ">Home</li></Link>
+            <Link to="/services" className='nav-link'><li className="nav-item">Services</li></Link>
+           <Link to="/ourvehicles" className='nav-link'> <li className="nav-item">Pricing</li></Link>
 
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                 Company
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/">News</a></li>
-                <li><a className="dropdown-item" href="/">Success Stories</a></li>
-                <li><a className="dropdown-item" href="/">About Us</a></li>
+                <li><Link className="dropdown-item" >News</Link></li>
+                <li><Link className="dropdown-item" >Success Stories</Link></li>
+                <li><Link className="dropdown-item" >About Us</Link></li>
               </ul>
             </li>
 

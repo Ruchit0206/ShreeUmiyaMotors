@@ -12,10 +12,11 @@ import DeliveryHighlight from './pages/DeliveryHighlight/DeliveryHighlight';
 import TeamSection from './pages/TeamSection/TeamSection';
 import OurVehicles from './pages/OurVehicles/OurVehicles';
 import Services from './pages/Services/Services';
+import AboutUs from './pages/AboutUs/Aboutus';
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
      
       <Routes>
@@ -23,9 +24,9 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/ourvehicles' element={<OurVehicles/>}/>
       </Routes>
-       
+
       <Footer/>
-    </>
+    </div>
   );
 }
 

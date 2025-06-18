@@ -51,7 +51,7 @@
   margin-top: 40px;
   padding: 12px 25px;
   font-size: 16px;
-  background-color: #5c4d7d;
+  background-color: #4c14c4;
   color: white;
   border: none;
   border-radius: 8px;
@@ -59,13 +59,13 @@
 }
 
 /* Modal Styles */
-.modal-backdrop {
+.modal-backdropp {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,9 @@
   max-width: 400px;
   position: relative;
 }
+.modal-content h3{
+  color:rgb(255, 255, 255);
+}
 
 .close-btn {
   position: absolute;
@@ -87,6 +90,7 @@
   right: 20px;
   font-size: 28px;
   cursor: pointer;
+  color:white;
 }
 
 .service-form input,
@@ -109,22 +113,6 @@
   cursor: pointer;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  height: 50px;
-  width: 50px;
-  z-index: 1001;
-}
-
-.whatsapp-float img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -133,3 +121,6 @@
     align-items: center;
   }
 }
+
+
+

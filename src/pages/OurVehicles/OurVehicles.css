@@ -21,17 +21,19 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .vehicle-img {
   width: 100%;
+  height: 250px;
+  object-fit: contain;  /* Show full image without crop */
+  background-color: #fff;  /* Optional: makes padding visible for non-square images */
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  height: 250px;
-  object-fit: cover;
 }
+
 
 .vehicle-img:hover {
   transform: scale(1.03);
@@ -40,11 +42,11 @@
 /* Modal Styling */
 .modal-overlay {
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(20, 20, 20, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,36 +54,39 @@
 }
 
 .modal-content {
-  background: #fff;
+  background: #0ed179;
   color: #333;
   padding: 30px;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
   overflow-y: auto;
   border-radius: 12px;
   position: relative;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  margin-top:50px
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-content img {
-  width: 100%;
-  height: 300px;       /* Fix: Keep natural image height */
-  max-height: none;   /* Remove height limitation */
+  max-width: 90%;
+  max-height: 60vh;
+  object-fit: contain;
   border-radius: 10px;
-  object-fit: contain; /* Optional: avoids cropping */
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .modal-content h3 {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.8rem;
   color: #5a3572;
 }
 
 .modal-content p {
   font-size: 1rem;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .book-btn {
@@ -93,6 +98,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  margin-top: 10px;
 }
 
 .book-btn:hover {
@@ -104,7 +110,7 @@
   top: 10px;
   right: 15px;
   font-size: 2rem;
-  color: #764478;
+  color: #fff;
   background: none;
   border: none;
   cursor: pointer;
@@ -112,10 +118,6 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-  .modal-content img {
-    max-height: 250px;
-  }
-
   .vehicles-title {
     font-size: 2rem;
   }
@@ -126,5 +128,9 @@
 
   .modal-content {
     padding: 20px;
+  }
+
+  .modal-content img {
+    max-height: 250px;
   }
 }

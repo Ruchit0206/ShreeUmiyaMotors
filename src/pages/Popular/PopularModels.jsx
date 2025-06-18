@@ -1,36 +1,40 @@
 import React from "react";
 import "./PopularModels.css";
-import img1 from "./img1.jpg";
-import img2 from "./img2.jpg";
-import img3 from "./img3.jpg";
-import img4 from "./img4.jpg";
+// import img1 from "./bindaas-01.webp";
+// import img2 from "./baxy-express-cng.webp";
+// import img3 from "./rath-2.png";
+// import img4 from "./baxy-express-diesel-3.webp";
 
 const PopularModels = () => {
   const models = [
     {
-      id: "01",
-      title: "Sunset Motors",
-      description: "Vibrant hues of red and blue capture the excitement and beauty of a summer drive.",
-      image: img1,
-    },
-    {
-      id: "02",
-      title: "Elegant Performance",
-      description: "Minimalist black sedans in a polished showroom, embodying sophistication and elegance.",
-      image: img2,
-    },
-    {
-      id: "03",
-      title: "Auto Elegance",
-      description: "Light silver models with sleek designs, bringing a touch of modern charm to any garage.",
-      image: img3,
-    },
-    {
-      id: "04",
-      title: "Blushing Rides",
-      description: "A stunning selection of SUVs and sedans, perfect for every lifestyle and budget.",
-      image: img4,
-    },
+    title: "BAXY Bindaas Diesel",
+    description: "Engine: Greaves BSVI OBD II Engine",
+    description1: "Fuel: Diesel",
+    description2: "Cargo Body: 5.5 Feet",
+    image: "/images/bindaas-01.webp",
+  },
+  {
+    title: "Baxy Express CNG",
+    description: "Engine: G 400 W VI Bi Fuel CNG",
+    description1: "Fuel: CNG",
+    description2: "Sitting Capacity: D+3",
+    image: "/images/baxy-express-cng.webp",
+  },
+  {
+    title: "BAXY E Rath e-rickshaw",
+    description: "Battery & Charger: 65 V DC 15A Axion SMPS",
+    description1: "Sitting Capacity: 4 Passenger + Driver",
+    description2: "Ground Clearance: 160 mm",
+    image: "/images/rath-2.png",
+  },
+  {
+    title: "Baxy Super King CNG Cargo",
+    description: "Engine: G 400 W VI Bi Fuel CNG",
+    description1: "Fuel: CNG",
+    description2: "Cargo Body (Tray/Deck Size): 6.5 Feet",
+    image: "/images/baxy-express-diesel-3.webp",
+  },
   ];
 
   return (
@@ -43,9 +47,13 @@ const PopularModels = () => {
         {models.map((model) => (
           <div className="model-card" key={model.id}>
             <p className="model-number">{model.id}</p>
+            <div className="image-container">
             <img src={model.image} alt={model.title} loading="lazy" />
             <h3>{model.title}</h3>
             <p>{model.description}</p>
+            <p>{model.description1}</p>
+            <p>{model.description2}</p>
+            </div>
           </div>
         ))}
       </div>
