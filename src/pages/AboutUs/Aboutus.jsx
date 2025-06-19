@@ -1,14 +1,27 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'; // ✅ Helmet for SEO
 import './AboutUs.css';
-import aboutImage from './About.jpg'; // Replace with your actual image
 
 const AboutUs = () => {
   return (
     <div className="about-container">
+      {/* ✅ SEO Helmet Block */}
+      <Helmet>
+        <title>About Us | Shree Umiya Motors - Baxy Dealers Since 2022</title>
+        <meta
+          name="description"
+          content="Learn more about Shree Umiya Motors, your trusted Baxy Mobility dealer in Gandhinagar and Himmatnagar. Established in 2022, we specialize in diesel, petrol, and electric rickshaws with full after-sales support."
+        />
+        <meta property="og:title" content="About Shree Umiya Motors - Baxy Auto Experts" />
+        <meta property="og:description" content="Official Baxy rickshaw dealers offering full support, service parts, and in-house garage facilities since 2022." />
+        <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/About.jpg" />
+        <meta property="og:url" content="https://shreeumiyamotors.vercel.app/about" />
+        <meta name="keywords" content="Shree Umiya Motors, Baxy Dealer, About Us, Auto Rickshaw Dealer, Gandhinagar, Himmatnagar, Electric Rickshaw" />
+      </Helmet>
+
       <h2><i className="fa-solid fa-forward"></i> About Us</h2>
       <div className="about-content">
         <div className="about-text">
-          
           <p>
             Established in <strong>2022</strong>, Shree Umiya Motors is the official dealer of <strong>Baxy Mobility</strong> in Gandhinagar and Himmatnagar.
             We take pride in offering a wide range of three-wheelers including <strong>diesel, petrol, and electric rickshaws</strong>.
@@ -19,20 +32,18 @@ const AboutUs = () => {
           <p>
             Whether you're looking for sustainable transport solutions or reliable auto-rickshaws, we’re your one-stop destination.
           </p>
-          <div className="location-section">
-        <h3 className='LLocattions'>Our Locations</h3>
-        <p>(1)Shree Umiya Motors - Himmatnagar</p>
-        <p>(2)Shree Umiya Motors - Gandhinagar</p>
-        
-      </div>
-        </div>
-        <div className="about-image">
-          <img src={aboutImage} alt="Shree Umiya Motors" />
-        </div>
-      </div>
 
-      {/* Location Section */}
-      
+          <div className="location-section">
+            <h3 className='LLocattions'>Our Locations</h3>
+            <p>(1) Shree Umiya Motors - Himmatnagar</p>
+            <p>(2) Shree Umiya Motors - Gandhinagar</p>
+          </div>
+        </div>
+
+        <div className="about-image">
+          <img src="/images/About.jpg" alt="Shree Umiya Motors" />
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet"; // ✅ Helmet import
 import "./Services.css";
 
 const services = [
@@ -27,6 +28,20 @@ const Services = () => {
 
   return (
     <section className="services-section">
+      {/* ✅ Helmet for SEO */}
+      <Helmet>
+        <title>Services | Shree Umiya Motors - Baxy Repair & Sales</title>
+        <meta
+          name="description"
+          content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
+        />
+        <meta property="og:title" content="Our Services - Shree Umiya Motors" />
+        <meta property="og:description" content="From sales to repairs, we’re here to support all your auto needs." />
+        <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/bindaas-01.webp" />
+        <meta property="og:url" content="https://shreeumiyamotors.vercel.app/services" />
+        <meta name="keywords" content="Baxy Repairs, Garage Service, Second-Hand Autos, Shree Umiya Motors" />
+      </Helmet>
+
       <div className="container">
         <h2 className="section-title">Our Services</h2>
         <p className="section-subtitle">
@@ -42,11 +57,8 @@ const Services = () => {
             </div>
           ))}
         </div>
-
-      
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="modal-backdropp" onClick={() => setShowModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -64,13 +76,11 @@ const Services = () => {
         </div>
       )}
 
-     <div className="location-section">
-        <h3 className='LLocattions'>Our Locations</h3>
-        <p>(1)Shree Umiya Motors - Himmatnagar</p>
-        <p>(2)Shree Umiya Motors - Gandhinagar</p>
-        
+      <div className="location-section">
+        <h3 className="LLocattions">Our Locations</h3>
+        <p>(1) Shree Umiya Motors - Himmatnagar</p>
+        <p>(2) Shree Umiya Motors - Gandhinagar</p>
       </div>
-
     </section>
   );
 };
