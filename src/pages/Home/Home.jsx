@@ -23,7 +23,7 @@ export default function Home() {
     <div>
       {/* ✅ Helmet for SEO */}
       <Helmet>
-        <title>Home | Shree Umiya Motors - Quality Baxy Autos at Your Service</title>
+      
         <meta
           name="description"
           content="Welcome to Shree Umiya Motors. Explore new and second-hand Baxy rickshaws, book test drives, and experience excellent service at our Himmatnagar and Gandhinagar branches."

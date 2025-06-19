@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div className="about-container">
       {/* ✅ SEO Helmet Block */}
       <Helmet>
-        <title>About Us | Shree Umiya Motors - Baxy Dealers Since 2022</title>
+       
         <meta
           name="description"
           content="Learn more about Shree Umiya Motors, your trusted Baxy Mobility dealer in Gandhinagar and Himmatnagar. Established in 2022, we specialize in diesel, petrol, and electric rickshaws with full after-sales support."

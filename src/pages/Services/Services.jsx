@@ -30,7 +30,7 @@ const Services = () => {
     <section className="services-section">
       {/* ✅ Helmet for SEO */}
       <Helmet>
-        <title>Services | Shree Umiya Motors - Baxy Repair & Sales</title>
+        
         <meta
           name="description"
           content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
