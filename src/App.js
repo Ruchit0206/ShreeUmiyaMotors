@@ -20,7 +20,7 @@ function App() {
     <>
       {/* ✅ Global Helmet fallback and JSON-LD */}
       <Helmet>
-        <title>Shree Umiya Motors | Baxy Auto Dealers in Gujarat</title>
+        <title>Shree Umiya Motors | Baxy Auto Dealer in Himmatnagar and Gandhinagar</title>
         <meta
           name="description"
           content="Explore Baxy auto models at Shree Umiya Motors in Himmatnagar and Gandhinagar. Book test drives, check vehicle details, and contact us easily."
