@@ -53,7 +53,8 @@ const ImageGallery = () => {
   return (
     <section className="inventory-gallery">
       <h1>Our Success Stories</h1>
-      <div className="gallery-grid">
+      <h1>Coming Soon..</h1>
+      {/* <div className="gallery-grid">
         {images.map((url, index) => (
           <div
             key={index}
@@ -63,7 +64,7 @@ const ImageGallery = () => {
             <img src={url} alt={`Gallery ${index + 1}`} loading="lazy"  />
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="gallery-text">
         <h2>Bringing Quality Vehicles to Your Driveway</h2>
