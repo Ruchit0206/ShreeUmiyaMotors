@@ -13,8 +13,8 @@ const ContactUs = () => {
         <div className="contact-info">
           <h4>Get in Touch</h4>
 
-          <p><FaMapMarkerAlt /> Near Sargasan Cross Road, Opp. Bharat Petroleum, Gandhinagar, Gujarat - 382421</p>
-          <p><FaMapMarkerAlt /> Nr. Bypass Road, Opp. ST Workshop, Himmatnagar, Gujarat - 383001</p>
+          <p><FaMapMarkerAlt /> 7797/1, Chamunda Service Station, Siholi Highway, NH-48, Mota Chiloda, Gandhinagar, Gujarat -382355</p>
+          <p><FaMapMarkerAlt /> Nr. Bypass Road, Opp. ST Workshop, Himatnagar, Gujarat - 383001</p>
 
           <p><FaPhoneAlt /> <a href="tel:+919099981277">+91 9099981277</a></p>
           <p><FaPhoneAlt /> <a href="tel:+919825753177">+91 9825753177</a></p>
@@ -73,7 +73,7 @@ const ContactUs = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <h4>Himmatnagar Branch</h4>
+              <h4>Himatnagar Branch</h4>
             </a>
             <iframe
               title="Himmatnagar Branch"

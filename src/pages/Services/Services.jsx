@@ -78,7 +78,7 @@ const Services = () => {
 
       <div className="location-section">
         <h3 className="LLocattions">Our Locations</h3>
-        <p>(1) Shree Umiya Motors - Himmatnagar</p>
+        <p>(1) Shree Umiya Motors - Himatnagar</p>
         <p>(2) Shree Umiya Motors - Gandhinagar</p>
       </div>
     </section>

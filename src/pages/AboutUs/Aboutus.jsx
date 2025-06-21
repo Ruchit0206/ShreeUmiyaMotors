@@ -23,7 +23,7 @@ const AboutUs = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Established in <strong>2022</strong>, Shree Umiya Motors is the official dealer of <strong>Baxy Mobility</strong> in Gandhinagar and Himmatnagar.
+            Established in <strong>2022</strong>, Shree Umiya Motors is the official dealer of <strong>Baxy Mobility</strong> in Gandhinagar and Himatnagar.
             We take pride in offering a wide range of three-wheelers including <strong>diesel, petrol, and electric rickshaws</strong>.
           </p>
           <p>
@@ -35,7 +35,7 @@ const AboutUs = () => {
 
           <div className="location-section">
             <h3 className='LLocattions'>Our Locations</h3>
-            <p>(1) Shree Umiya Motors - Himmatnagar</p>
+            <p>(1) Shree Umiya Motors - Himatnagar</p>
             <p>(2) Shree Umiya Motors - Gandhinagar</p>
           </div>
         </div>

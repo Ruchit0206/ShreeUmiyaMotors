@@ -31,12 +31,12 @@ const Footer = () => {
             >
               <FaMapMarkerAlt />
             </a></strong>
-            Near Sargasan Cross Road, Opp. Bharat Petroleum, Gandhinagar, Gujarat - 382421{' '}
+           7797/1, Chamunda Service Station, Siholi Highway, NH-48, Mota Chiloda, Gandhinagar, Gujarat -382355{' '}
            
           </p>
 
           <p>
-            <strong style={{color:"yellow",fontSize:"large"}}>Himmatnagar Branch:  <a 
+            <strong style={{color:"yellow",fontSize:"large"}}>Himatnagar Branch:  <a 
               href="https://maps.app.goo.gl/zhtkxfeLaQ69dHcu7"
               target="_blank" 
               rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Footer = () => {
             >
               <FaMapMarkerAlt />
             </a></strong>
-            Nr. Bypass Road, Opp. ST Workshop, Himmatnagar, Gujarat - 383001{' '}
+           Survey No.439, Near Shree Ramdev Motors Repairing, ByPass Road , Katvad, Himmatnagar, Gujarat -383001 {' '}
            
           </p>
         </div>
