@@ -58,7 +58,7 @@ export default function Home() {
       <PopularModels />
       <BuyingSteps />
       <ImageGallery />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <OurVehicles />
       <Services />
       <ContactUs />
