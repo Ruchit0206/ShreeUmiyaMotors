@@ -14,6 +14,7 @@ import AboutUs from './pages/AboutUs/Aboutus';
 import ContactUs from './pages/ContactUs/ContactUs';
 import TeamSection from './pages/TeamSection/TeamSection';
 import BookTestDrive from './pages/Test Drive/BookTestDrive';
+import UnderDevelopment from './pages/UnderDevelopment/UnderDevelopment';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/team" element={<TeamSection />} />
         <Route path="/BookTestDrive" element={<BookTestDrive />} />
+        <Route path="/underdevelopment" element={<UnderDevelopment />} />
       </Routes>
       <Footer />
     </>

@@ -45,14 +45,14 @@ const Navbar = () => {
                 Company
               </a>
               <ul className="dropdown-menu">
-                <li><Link to="/news" className="dropdown-item" onClick={closeMobileMenu}>News</Link></li>
+                <li><Link to="/underdevelopment" className="dropdown-item" onClick={closeMobileMenu}>News</Link></li>
                 <li><Link to="/success" className="dropdown-item" onClick={closeMobileMenu}>Success Stories</Link></li>
-                <li><Link to="/about" className="dropdown-item" onClick={closeMobileMenu}>About Us</Link></li>
+                <li><Link to="/underdevelopment" className="dropdown-item" onClick={closeMobileMenu}> Team</Link></li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <Link to="/team" className="nav-link" onClick={closeMobileMenu}>Team</Link>
+              <Link to="/about" className="nav-link" onClick={closeMobileMenu}>About Us</Link>
             </li>
 
             <li className="nav-item">

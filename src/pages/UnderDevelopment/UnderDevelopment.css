@@ -1,0 +1,53 @@
+.under-development-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  /* padding: 20px; */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.under-development-content {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.under-development-content h1 {
+  color: #e67e22;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.under-development-content p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 480px) {
+  .under-development-content {
+    padding: 30px 20px;
+  }
+
+  .under-development-content h1 {
+    font-size: 1.5em;
+  }
+
+  .under-development-content p {
+    font-size: 1em;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (max-width: 768px) {
+  .under-development-content {
+    max-width: 90%;
+    padding: 35px 25px;
+  }
+}
