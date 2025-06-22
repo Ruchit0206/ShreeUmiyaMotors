@@ -66,7 +66,7 @@ const OurVehicles = ({ disableHelmet = false }) => {
       {/* Only apply Helmet if not disabled */}
       {!disableHelmet && (
         <Helmet>
-          <title>Vehicles - Shree Umiya Motors</title>
+          <title>Our Vehicles - Shree Umiya Motors</title>
           <meta
             name="description"
             content="Welcome to Shree Umiya Motors. Explore new and second-hand Baxy rickshaws, book test drives, and experience excellent service at our Himmatnagar and Gandhinagar branches."

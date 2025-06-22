@@ -36,17 +36,27 @@ export default function Home() {
 
       <div className="hero-section">
         <div className="hero-content">
-          <h5 className="hero-subtitle animate-text">Drive with Confidence:</h5>
-          <h1 className="hero-title animate-text">Rickshaws That Work as Hard as You Do.</h1>
+          <h3 className="hero-subtitle animate-text">Drive with Confidence:</h3>
+          <h1 className="hero-title animate-text">Rickshaws That Power Your Everyday Hustle.</h1>
           <Link to="/BookTestDrive">
             <button className="cta-button">Book a Test Drive</button>
           </Link>
           <div className="scroll-down-arrow" onClick={scrollToAboutSection}></div>
         </div>
 
-        <a href="tel:9099981277" className="call-float">
-          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us" className="call-icon" />
-        </a>
+        <a
+  href="https://wa.me/919099981277"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="call-float"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+    alt="WhatsApp Us"
+    className="call-icon"
+  />
+</a>
+
       </div>
 
       <div ref={aboutSectionRef} className="scroll-section">
