@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "postinstall": "npm install --legacy-peer-deps",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,8 +39,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-     "postinstall": "npm install --legacy-peer-deps",
-  "build": "react-scripts build"
+    ]
+ 
   }
 }
