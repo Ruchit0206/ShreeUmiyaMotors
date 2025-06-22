@@ -7,10 +7,8 @@ export default function BookTestDrive() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     vehicle: "",
     date: "",
-    time: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -26,35 +24,38 @@ export default function BookTestDrive() {
     e.preventDefault();
 
     // Admin email
-    emailjs.sendForm(
-      "service_5t95r6l",
-      "template_mlz4r1u",
-      formRef.current,
-      "2HpiL-e-iajvluOnp"
-    ).then(
-      (result) => {
-        console.log("Admin email sent", result.text);
-      },
-      (error) => {
-        console.log("Admin email error", error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        "service_5t95r6l",
+        "template_mlz4r1u",
+        formRef.current,
+        "2HpiL-e-iajvluOnp"
+      )
+      .then(
+        (result) => {
+          console.log("Admin email sent", result.text);
+          setSubmitted(true); // ✅ Show success message
 
-    // User confirmation email
-    emailjs.sendForm(
-      "service_5t95r6l",
-      "template_i0nhb73",
-      formRef.current,
-      "2HpiL-e-iajvluOnp"
-    ).then(
-      (result) => {
-        console.log("User confirmation sent", result.text);
-        setSubmitted(true);
-      },
-      (error) => {
-        console.log("User email error", error.text);
-      }
-    );
+          // Send user confirmation (non-blocking)
+          emailjs
+            .sendForm(
+              "service_5t95r6l",
+              "template_i0nhb73",
+              formRef.current,
+              "2HpiL-e-iajvluOnp"
+            )
+            .then((res) => {
+              console.log("User confirmation sent", res.text);
+            })
+            .catch((err) => {
+              console.log("User confirmation error", err.text);
+            });
+        },
+        (error) => {
+          console.log("Admin email error", error.text);
+          alert("❌ Failed to submit. Please try again.");
+        }
+      );
   };
 
   return (
@@ -64,19 +65,21 @@ export default function BookTestDrive() {
         <p className="success-message">✅ Thank you! We'll contact you shortly.</p>
       ) : (
         <form className="test-drive-form" ref={formRef} onSubmit={handleSubmit}>
+          <label htmlFor="name">Full Name</label>
           <input
             type="text"
             name="name"
-            placeholder="Full Name"
+            id="name"
             required
             value={formData.name}
             onChange={handleChange}
           />
 
+          <label htmlFor="phone">Phone Number</label>
           <input
             type="tel"
             name="phone"
-            placeholder="Phone Number"
+            id="phone"
             pattern="[0-9]{10}"
             title="Enter 10-digit number"
             required
@@ -84,41 +87,28 @@ export default function BookTestDrive() {
             onChange={handleChange}
           />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-            value={formData.email}
-            onChange={handleChange}
-          />
-
+          <label htmlFor="vehicle">Select Vehicle</label>
           <select
             name="vehicle"
+            id="vehicle"
             required
             value={formData.vehicle}
             onChange={handleChange}
           >
-            <option value="">Select Vehicle</option>
+            <option value="">-- Select Vehicle --</option>
             <option value="Baxy Cargo">Baxy Cargo</option>
             <option value="Baxy Passenger">Baxy Passenger</option>
             <option value="Electric Auto">Electric Auto</option>
             <option value="CNG Auto">CNG Auto</option>
           </select>
 
+          <label htmlFor="date">Preferred Date</label>
           <input
             type="date"
             name="date"
+            id="date"
             required
             value={formData.date}
-            onChange={handleChange}
-          />
-
-          <input
-            type="time"
-            name="time"
-            required
-            value={formData.time}
             onChange={handleChange}
           />
 

@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
-import { Helmet } from 'react-helmet'; // ✅ Helmet import
+import { Helmet } from 'react-helmet-async';
 import './Home.css';
 
 import PopularModels from '../Popular/PopularModels';
 import BuyingSteps from '../BuyingSteps/BuyingSteps';
 import OurVehicles from '../OurVehicles/OurVehicles';
-import TeamSection from '../TeamSection/TeamSection';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Services from '../Services/Services';
 import AboutUs from '../AboutUs/Aboutus';
@@ -21,9 +20,9 @@ export default function Home() {
 
   return (
     <div>
-      {/* ✅ Helmet for SEO */}
+      {/* ✅ Helmet only here */}
       <Helmet>
-      
+        <title>HomePage - Shree Umiya Motors</title>
         <meta
           name="description"
           content="Welcome to Shree Umiya Motors. Explore new and second-hand Baxy rickshaws, book test drives, and experience excellent service at our Himmatnagar and Gandhinagar branches."
@@ -38,30 +37,28 @@ export default function Home() {
       <div className="hero-section">
         <div className="hero-content">
           <h5 className="hero-subtitle animate-text">Drive with Confidence:</h5>
-          <h1 className="hero-title animate-text">Quality Cars Delivered to Your Driveway!</h1>
+          <h1 className="hero-title animate-text">Rickshaws That Work as Hard as You Do.</h1>
           <Link to="/BookTestDrive">
             <button className="cta-button">Book a Test Drive</button>
           </Link>
           <div className="scroll-down-arrow" onClick={scrollToAboutSection}></div>
         </div>
 
-        {/* Call Floating Button */}
         <a href="tel:9099981277" className="call-float">
           <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us" className="call-icon" />
         </a>
       </div>
 
       <div ref={aboutSectionRef} className="scroll-section">
-        <AboutUs />
+        <AboutUs disableHelmet={true} />
       </div>
 
       <PopularModels />
       <BuyingSteps />
-      <ImageGallery />
-      {/* <TeamSection /> */}
-      <OurVehicles />
-      <Services />
-      <ContactUs />
+      <ImageGallery disableHelmet={true}/>
+      <OurVehicles  disableHelmet={true}/>
+      <Services disableHelmet={true} />
+      <ContactUs  disableHelmet={true}/>
     </div>
   );
 }

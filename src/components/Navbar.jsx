@@ -29,7 +29,7 @@ const Navbar = () => {
           <ul className="navbar-nav align-items-center">
 
             <li className="nav-item">
-              <Link to="/" className='nav-link' onClick={closeMobileMenu}>Home</Link>
+              <a className='nav-link' onClick={closeMobileMenu} href="/">Home</a>
             </li>
 
             <li className="nav-item">

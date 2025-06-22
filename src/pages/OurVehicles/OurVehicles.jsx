@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './OurVehicles.css';
+import { Helmet } from 'react-helmet-async';
 
 const vehicleData = [
   {
@@ -32,50 +33,52 @@ const vehicleData = [
     image: "/images/baxy-express-diesel-3.webp",
   },
   {
-    
-     
     title: "BAXY Bindaas Diesel",
     description: "Engine: Greaves BSVI OBD II Engine",
     description1: "Fuel: Diesel",
     description2: "Cargo Body: 5.5 Feet",
     image: "/images/baxy-super-cargo.webp",
-  
   },
-    {
-    
-     
+  {
     title: "BAXY Bindaas Diesel",
     description: "Engine: Greaves BSVI OBD II Engine",
     description1: "Fuel: Diesel",
     description2: "Cargo Body: 5.5 Feet",
     image: "/images/baxy-superking1.webp",
-  
   },
-   {
-    
-     
+  {
     title: "BAXY Bindaas Diesel",
     description: "Engine: Greaves BSVI OBD II Engine",
     description1: "Fuel: Diesel",
     description2: "Cargo Body: 5.5 Feet",
     image: "/images/Express_Auto.png",
-  
   },
 ];
 
-const OurVehicles = () => {
+const OurVehicles = ({ disableHelmet = false }) => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
 
-  const openModal = (vehicle) => {
-    setSelectedVehicle(vehicle);
-  };
-
-  const closeModal = () => {
-    setSelectedVehicle(null);
-  };
+  const openModal = (vehicle) => setSelectedVehicle(vehicle);
+  const closeModal = () => setSelectedVehicle(null);
 
   return (
     <div className="vehicles-wrapper">
+      {/* Only apply Helmet if not disabled */}
+      {!disableHelmet && (
+        <Helmet>
+          <title>Vehicles - Shree Umiya Motors</title>
+          <meta
+            name="description"
+            content="Welcome to Shree Umiya Motors. Explore new and second-hand Baxy rickshaws, book test drives, and experience excellent service at our Himmatnagar and Gandhinagar branches."
+          />
+          <meta property="og:title" content="Shree Umiya Motors - Your Trusted Baxy Dealer" />
+          <meta property="og:description" content="Book a test drive, explore our vehicle range, or visit our showrooms in Himmatnagar and Gandhinagar." />
+          <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/bindaas-01.webp" />
+          <meta property="og:url" content="https://shreeumiyamotors.vercel.app/" />
+          <meta name="keywords" content="Baxy Rickshaws, Auto Dealers Himmatnagar, Shree Umiya Motors, Test Drive, Baxy Electric" />
+        </Helmet>
+      )}
+
       <h2 className="vehicles-title">Our Vehicles</h2>
       <p className="vehicles-subtitle">
         Explore our curated selection of vehicles, each meticulously inspected to ensure quality, reliability, and a touch of luxury.
@@ -102,7 +105,9 @@ const OurVehicles = () => {
             <p>{selectedVehicle.description}</p>
             <p>{selectedVehicle.description1}</p>
             <p>{selectedVehicle.description2}</p>
-            <Link to="/BookTestDrive"><button className="book-btn">Book Test Drive</button></Link>
+            <Link to="/BookTestDrive">
+              <button className="book-btn">Book Test Drive</button>
+            </Link>
           </div>
         </div>
       )}

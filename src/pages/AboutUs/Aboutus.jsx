@@ -1,24 +1,27 @@
 import React from 'react';
-import { Helmet } from 'react-helmet'; // ✅ Helmet for SEO
+import { Helmet } from 'react-helmet-async'; // Correct Helmet import
 import './AboutUs.css';
 
-const AboutUs = () => {
+const AboutUs = ({ disableHelmet }) => {
   return (
     <div className="about-container">
-      {/* ✅ SEO Helmet Block */}
-      <Helmet>
-       
-        <meta
-          name="description"
-          content="Learn more about Shree Umiya Motors, your trusted Baxy Mobility dealer in Gandhinagar and Himmatnagar. Established in 2022, we specialize in diesel, petrol, and electric rickshaws with full after-sales support."
-        />
-        <meta property="og:title" content="About Shree Umiya Motors - Baxy Auto Experts" />
-        <meta property="og:description" content="Official Baxy rickshaw dealers offering full support, service parts, and in-house garage facilities since 2022." />
-        <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/About.jpg" />
-        <meta property="og:url" content="https://shreeumiyamotors.vercel.app/about" />
-        <meta name="keywords" content="Shree Umiya Motors, Baxy Dealer, About Us, Auto Rickshaw Dealer, Gandhinagar, Himmatnagar, Electric Rickshaw" />
-      </Helmet>
+      {/* ✅ Helmet SEO (only if not disabled) */}
+      {!disableHelmet && (
+        <Helmet>
+          <title>About Us - Shree Umiya Motors</title>
+          <meta
+            name="description"
+            content="Learn more about Shree Umiya Motors, your trusted Baxy Mobility dealer in Gandhinagar and Himmatnagar. Established in 2022, we specialize in diesel, petrol, and electric rickshaws with full after-sales support."
+          />
+          <meta property="og:title" content="About Shree Umiya Motors - Baxy Auto Experts" />
+          <meta property="og:description" content="Official Baxy rickshaw dealers offering full support, service parts, and in-house garage facilities since 2022." />
+          <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/About.jpg" />
+          <meta property="og:url" content="https://shreeumiyamotors.vercel.app/about" />
+          <meta name="keywords" content="Shree Umiya Motors, Baxy Dealer, Auto Rickshaw Dealer, Gandhinagar, Himmatnagar, Electric Rickshaw" />
+        </Helmet>
+      )}
 
+      {/* Page Content */}
       <h2><i className="fa-solid fa-forward"></i> About Us</h2>
       <div className="about-content">
         <div className="about-text">
@@ -35,8 +38,12 @@ const AboutUs = () => {
 
           <div className="location-section">
             <h3 className='LLocattions'>Our Locations</h3>
-            <p>(1) Shree Umiya Motors - Himatnagar</p>
-            <p>(2) Shree Umiya Motors - Gandhinagar</p>
+            <a href="https://maps.app.goo.gl/zhtkxfeLaQ69dHcu7" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', marginLeft: '5px' }}>
+              <p>(1) Shree Umiya Motors - Himatnagar</p>
+            </a>
+            <a href="https://maps.app.goo.gl/9z6PL2zK3FTGi9Mq8" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', marginLeft: '5px' }}>
+              <p>(2) Shree Umiya Motors - Gandhinagar</p>
+            </a>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet"; // ✅ Helmet import
+import { Helmet } from "react-helmet-async"; // ✅ Helmet import
 import "./Services.css";
 
 const services = [
@@ -23,24 +23,26 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Services = ({ disableHelmet = false }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="services-section">
-      {/* ✅ Helmet for SEO */}
-      <Helmet>
-        
-        <meta
-          name="description"
-          content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
-        />
-        <meta property="og:title" content="Our Services - Shree Umiya Motors" />
-        <meta property="og:description" content="From sales to repairs, we’re here to support all your auto needs." />
-        <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/bindaas-01.webp" />
-        <meta property="og:url" content="https://shreeumiyamotors.vercel.app/services" />
-        <meta name="keywords" content="Baxy Repairs, Garage Service, Second-Hand Autos, Shree Umiya Motors" />
-      </Helmet>
+      {/* ✅ Only render Helmet if allowed */}
+      {!disableHelmet && (
+        <Helmet>
+          <title>Services - Shree Umiya Motors</title>
+          <meta
+            name="description"
+            content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
+          />
+          <meta property="og:title" content="Our Services - Shree Umiya Motors" />
+          <meta property="og:description" content="From sales to repairs, we’re here to support all your auto needs." />
+          <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/bindaas-01.webp" />
+          <meta property="og:url" content="https://shreeumiyamotors.vercel.app/services" />
+          <meta name="keywords" content="Baxy Repairs, Garage Service, Second-Hand Autos, Shree Umiya Motors" />
+        </Helmet>
+      )}
 
       <div className="container">
         <h2 className="section-title">Our Services</h2>

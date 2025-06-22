@@ -1,7 +1,7 @@
 .test-drive-container {
-  padding: 40px 20px;
+  padding: 40px 20px 10px 10px;
   max-width: 600px;
-  margin: auto;
+  margin:10px auto 10px;
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 0 10px #ccc;
@@ -11,6 +11,11 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.test-drive-form label {
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
 
 .test-drive-form {
   display: flex;
