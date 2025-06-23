@@ -4,23 +4,23 @@ import "./BuyingSteps.css";
 const steps = [
   {
     number: "1",
-    title: "Add to cart",
-    description: "Let your customers explore our wide range of vehicles.",
+    title: "Visit or Call Us",
+    description: "Connect with our team or walk into the showroom to begin your booking process.",
   },
   {
     number: "2",
-    title: "Sign in",
-    description: "Click on the number to adapt it to your purpose.",
+    title: "Select Your Model",
+    description: "Choose from our range of Baxy Mobility auto rickshaw models that suit your needs.",
   },
   {
     number: "3",
-    title: "Pay",
-    description: "Duplicate blocks to add more steps.",
+    title: "Payment & Exchange",
+    description: "Pay via cash, cheque, loan, or other available options.Exchange is also available if applicable.",
   },
   {
     number: "4",
-    title: "Get Delivered",
-    description: "Select and delete blocks to remove some steps.",
+    title: "Delivery",
+    description: "Receive your vehicle with full documentation and customer support.",
   },
 ];
 

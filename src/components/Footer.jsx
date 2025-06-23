@@ -2,8 +2,7 @@
 import React from "react";
 import "./Footer.css";
 import {
-  FaFacebookF,
-  FaTwitter,
+
   FaInstagram,
   FaLinkedinIn,
   FaPhoneAlt,
@@ -90,13 +89,13 @@ const Footer = () => {
               +91 9099981277
             </a>
           </p>
-          <a href="mailto:shreeumiyamotors@gmail.com">
+          <a href="mailto:shreeumiyamotors@gmail.com" style={{textDecoration:"none"}}>
             <p style={{ color: "white", textDecoration: "none" }}>
               <FaEnvelope
                 style={{
                   marginRight: "10px",
                   color: "white",
-                  textDecoration: "none",
+                  textDecoration: "underline",
                 }}
               />
               shreeumiyamotors@gmail.com
@@ -104,10 +103,10 @@ const Footer = () => {
           </a>
 
           <div className="social-icons">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaInstagram />
-            <FaLinkedinIn />
+          
+          
+            <a href="https://www.instagram.com/shreeumiyamotor/" target="_blank" rel="noreferrer"><FaInstagram style={{color:"white"}} /></a>
+           <a href="https://www.linkedin.com/company/shree-umiya-motors" target="_blank" rel="noreferrer"> <FaLinkedinIn style={{color:"white"}}/></a>
           </div>
         </div>
       </div>

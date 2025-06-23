@@ -9,14 +9,13 @@
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 40px;
-  font-family: 'Georgia', serif;
 }
 
 .steps-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -24,6 +23,44 @@
   flex: 1 1 200px;
   max-width: 250px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  position: relative;
+  background: #7b4b68;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.step-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.step-box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.step-box:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.step-box:nth-child(7) {
+  animation-delay: 0.8s;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .step-circle {
@@ -33,7 +70,7 @@
   font-weight: bold;
   width: 60px;
   height: 60px;
-  margin: 0 auto 15px;
+  margin: 0 auto 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -41,18 +78,20 @@
 }
 
 .step-box h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .step-box p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: #f7e9f0;
   padding: 0 5px;
 }
 
-/* Arrows */
+/* Arrows for desktop */
 .arrow {
   font-size: 2rem;
   color: #fcd8e2;
@@ -68,10 +107,35 @@
   margin: 10px 0;
 }
 
-/* Mobile layout */
+/* Mobile layout: vertical timeline */
 @media screen and (max-width: 768px) {
   .steps-container {
     flex-direction: column;
+    position: relative;
+    padding-left: 30px;
+    align-items: flex-start;
+  }
+
+  .step-box {
+    max-width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    background: transparent;
+    border-left: 3px solid #fcd8e2;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .step-circle {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fcd8e2;
+    color: #805071;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 
   .arrow-desktop {
@@ -79,10 +143,6 @@
   }
 
   .arrow-mobile {
-    display: block;
-  }
-
-  .step-box {
-    max-width: 100%;
+    display: none;
   }
 }
