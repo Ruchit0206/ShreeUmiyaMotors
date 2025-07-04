@@ -37,7 +37,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/ourvehicles" className='nav-link' onClick={closeMobileMenu}>Vehicles</Link>
+              <Link to="/vehicles" className='nav-link' onClick={closeMobileMenu}>Vehicles</Link>
             </li>
 
             <li className="nav-item dropdown">

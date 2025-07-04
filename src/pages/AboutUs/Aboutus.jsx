@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'; // Correct Helmet import
 import './AboutUs.css';
+import BusinessStats from '../BusinessStats/BusinessStats';
 
 const AboutUs = ({ disableHelmet }) => {
   return (
@@ -36,8 +37,8 @@ const AboutUs = ({ disableHelmet }) => {
             Whether you're looking for sustainable transport solutions or reliable auto-rickshaws, we’re your one-stop destination.
           </p>
 
-          <div className="location-section">
-            <h3 className='LLocattions'>Our Locations</h3>
+          <div className="location-sectiona">
+            <h3 className='llocattions'>Our Locations</h3>
             <a href="https://maps.app.goo.gl/zhtkxfeLaQ69dHcu7" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', marginLeft: '5px' }}>
               <p>(1) Shree Umiya Motors - Himatnagar</p>
             </a>
@@ -51,6 +52,7 @@ const AboutUs = ({ disableHelmet }) => {
           <img src="/images/About.jpg" alt="Shree Umiya Motors" />
         </div>
       </div>
+      <BusinessStats/>
     </div>
   );
 };

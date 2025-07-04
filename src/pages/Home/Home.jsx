@@ -4,7 +4,7 @@ import './Home.css';
 
 import PopularModels from '../Popular/PopularModels';
 import BuyingSteps from '../BuyingSteps/BuyingSteps';
-import OurVehicles from '../OurVehicles/OurVehicles';
+// import OurVehicles from '../OurVehicles/OurVehicles';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Services from '../Services/Services';
 import AboutUs from '../AboutUs/Aboutus';
@@ -63,10 +63,10 @@ export default function Home() {
         <AboutUs disableHelmet={true} />
       </div>
 
-      <PopularModels />
+      <PopularModels disableHelmet={true}/>
       <BuyingSteps />
       <ImageGallery disableHelmet={true}/>
-      <OurVehicles  disableHelmet={true}/>
+      {/* <OurVehicles  disableHelmet={true}/> */}
       <Services disableHelmet={true} />
       <ContactUs  disableHelmet={true}/>
     </div>

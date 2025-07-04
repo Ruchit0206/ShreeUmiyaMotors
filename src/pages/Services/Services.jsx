@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async"; // ✅ Helmet import
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import "./Services.css";
 
 const services = [
@@ -24,11 +24,8 @@ const services = [
 ];
 
 const Services = ({ disableHelmet = false }) => {
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <section className="services-section">
-      {/* ✅ Only render Helmet if allowed */}
       {!disableHelmet && (
         <Helmet>
           <title>Services - Shree Umiya Motors</title>
@@ -36,11 +33,6 @@ const Services = ({ disableHelmet = false }) => {
             name="description"
             content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
           />
-          <meta property="og:title" content="Our Services - Shree Umiya Motors" />
-          <meta property="og:description" content="From sales to repairs, we’re here to support all your auto needs." />
-          <meta property="og:image" content="https://shreeumiyamotors.vercel.app/images/bindaas-01.webp" />
-          <meta property="og:url" content="https://shreeumiyamotors.vercel.app/services" />
-          <meta name="keywords" content="Baxy Repairs, Garage Service, Second-Hand Autos, Shree Umiya Motors" />
         </Helmet>
       )}
 
@@ -59,29 +51,6 @@ const Services = ({ disableHelmet = false }) => {
             </div>
           ))}
         </div>
-      </div>
-
-      {showModal && (
-        <div className="modal-backdropp" onClick={() => setShowModal(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close-btn" onClick={() => setShowModal(false)}>
-              ×
-            </span>
-            <h3>Book a Service</h3>
-            <form className="service-form">
-              <input type="text" placeholder="Full Name" required />
-              <input type="tel" placeholder="Phone Number" required />
-              <textarea placeholder="Service Details..." required></textarea>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      )}
-
-      <div className="location-section">
-        <h3 className="LLocattions">Our Locations</h3>
-        <p>(1) Shree Umiya Motors - Himatnagar</p>
-        <p>(2) Shree Umiya Motors - Gandhinagar</p>
       </div>
     </section>
   );
