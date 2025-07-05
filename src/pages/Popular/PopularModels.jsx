@@ -13,6 +13,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Fuel: Diesel",
       description2: "Cargo Body: 5.5 Feet",
       image: "/images/bindaas-01.webp",
+       sticker: "DIESEL"
     },
     {
       id: 2,
@@ -21,14 +22,17 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Fuel: CNG",
       description2: "Sitting Capacity: D+3",
       image: "/images/baxy-express-cng.webp",
+       sticker: "CNG"
     },
     {
-      id: 3,
+      id: 3,  
       title: "BAXY E Rath e-Rickshaw",
       description: "Battery & Charger: 65 V DC 15A Axion SMPS",
       description1: "Sitting Capacity: 4 Passenger + Driver",
       description2: "Ground Clearance: 160 mm",
       image: "/images/rath-2.png",
+       sticker: "ELECTRIC"
+      
     },
     {
       id: 4,
@@ -37,6 +41,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Fuel: CNG",
       description2: "Cargo Body (Tray/Deck Size): 6.5 Feet",
       image: "/images/baxy-express-diesel-3.webp",
+       sticker: "CNG"
     },
     {
       id: 5,
@@ -45,6 +50,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 100–110 km; Seating: Driver + 4",
       description2: "Wheelbase: 2090 mm; GC: 140 mm",
       image: "/images/baxy-boss.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 6,
@@ -53,6 +59,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 110+ km; Seating: Driver + 4",
       description2: "Wheelbase: 2090 mm; GC: 140 mm",
       image: "/images/baxy-taksy.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 7,
@@ -61,6 +68,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 130+ km; Seating: Driver + 3",
       description2: "Wheelbase: 1940 mm; GC: 180 mm",
       image: "/images/baxy-lion.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 8,
@@ -69,6 +77,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 130+ km; Seating: Driver + 3",
       description2: "Wheelbase: 2000 mm; GC: 170 mm",
       image: "/images/baxy-cub.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 9,
@@ -77,6 +86,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 100–110 km; Seating: Driver + 4",
       description2: "Wheelbase: 2200 mm; GC: 150 mm",
       image: "/images/baxy-elio.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 10,
@@ -85,6 +95,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 110–120 km; GVW: 670–838 kg",
       description2: "Wheelbase: 2090 mm; GC: 140 mm",
       image: "/images/baxy-shaktee.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 11,
@@ -93,6 +104,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 130+ km; GVW: 995 kg",
       description2: "Wheelbase: 2110 mm; GC: 200 mm",
       image: "/images/baxy-magnate-cargo.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 12,
@@ -101,6 +113,7 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 130+ km; GVW similar to cargo",
       description2: "Wheelbase: 2110 mm; GC: 200 mm",
       image: "/images/baxy-magnate-delivery.webp",
+       sticker: "ELECTRIC"
     },
     {
       id: 13,
@@ -109,12 +122,12 @@ const PopularModels = ({ disableHelmet = false }) => {
       description1: "Range: 100–110 km; GVW: ~780 kg",
       description2: "Wheelbase: 2220 mm; GC: 130–140 mm",
       image: "/images/baxy-e-cart-ld.webp",
+       sticker: "ELECTRIC"
     },
   ];
 
   return (
     <div className="popular-models">
-      {/* ✅ Helmet for SEO */}
       {!disableHelmet && (
         <Helmet>
           <title>Popular Models | Shree Umiya Motors</title>
@@ -135,6 +148,11 @@ const PopularModels = ({ disableHelmet = false }) => {
       <div className="models-grid">
         {models.map((model) => (
           <div className="model-card" key={model.id}>
+            {model.sticker && (
+              <span className={`fuel-badge ${model.sticker.toLowerCase()}`}>
+                {model.sticker}
+              </span>
+            )}
             <p className="model-number">{model.id}</p>
             <div
               className="image-container"
@@ -151,17 +169,10 @@ const PopularModels = ({ disableHelmet = false }) => {
         ))}
       </div>
 
-      {/* Modal with Image + Text */}
       {selectedModel && (
         <div className="modal-backdrop" onClick={() => setSelectedModel(null)}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="close-button"
-              onClick={() => setSelectedModel(null)}
-            >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={() => setSelectedModel(null)}>
               &times;
             </button>
             <img

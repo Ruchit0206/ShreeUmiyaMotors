@@ -7,19 +7,31 @@ const services = [
     title: "Authorized Baxy Dealer",
     icon: "🚛",
     description:
-      "We are proud to be an official authorized dealer of Baxy Mobility. Discover our latest range of electric and passenger rickshaws with trusted performance.",
+      "We are proud to be an official authorized dealer of Baxy Mobility. Explore our range of cng, electric and diesel rickshaws backed by trust and performance.",
   },
   {
-    title: "Garage & Repair Service",
-    icon: "🔧",
+    title: "Loan Assistance",
+    icon: "💰",
     description:
-      "Our expert mechanics offer repair and maintenance for all rickshaw brands. From engine issues to electric faults, we’ve got your ride covered.",
+      "Need help financing your rickshaw? We provide hassle-free loan assistance with minimal paperwork and quick approvals.",
+  },
+  {
+    title: "Servicing & Maintenance",
+    icon: "🛠️",
+    description:
+      "From regular servicing to advanced repairs, our expert garage team ensures your rickshaw stays in perfect condition.",
   },
   {
     title: "Second-Hand Rickshaw Sales",
     icon: "♻️",
     description:
-      "Looking for a budget-friendly ride? We also offer well-maintained second-hand rickshaws at affordable prices with full inspection reports.",
+      "Looking for an affordable ride? Choose from our inspected and verified second-hand rickshaws with warranty options.",
+  },
+  {
+    title: "Buyback Offer",
+    icon: "🔄",
+    description:
+      "Upgrade easily! Get a great deal on your old rickshaw when you buy a new one from us. Instant valuation and transparent process.",
   },
 ];
 
@@ -31,7 +43,7 @@ const Services = ({ disableHelmet = false }) => {
           <title>Services - Shree Umiya Motors</title>
           <meta
             name="description"
-            content="We provide authorized Baxy sales, garage services, and second-hand auto deals. Visit Shree Umiya Motors in Himmatnagar and Gandhinagar today!"
+            content="We provide Baxy rickshaw sales, loan assistance, servicing, second-hand deals, and buyback offers. Visit Shree Umiya Motors in Himmatnagar today!"
           />
         </Helmet>
       )}
@@ -39,7 +51,7 @@ const Services = ({ disableHelmet = false }) => {
       <div className="container">
         <h2 className="section-title">Our Services</h2>
         <p className="section-subtitle">
-          Delivering trust, quality, and complete support to our customers.
+          From purchase to servicing and resale — Shree Umiya Motors has you covered!
         </p>
 
         <div className="services-grid">
