@@ -28,7 +28,7 @@ const AboutUs = ({ disableHelmet }) => {
         <div className="about-text">
           <p>
             Established in <strong>2022</strong>, Shree Umiya Motors is the official dealer of <strong>Baxy Mobility</strong> in Gandhinagar and Himatnagar.
-            We take pride in offering a wide range of three-wheelers including <strong>Diesel, Cng, and Electric rickshaws</strong>.
+            We take pride in offering a wide range of three-wheelers including <strong>Diesel, CNG, and Electric rickshaws</strong>.
           </p>
           <p>
             With a commitment to quality and service, we not only provide vehicles but also ensure complete support with our <strong>service parts, regular servicing, and in-house garage facility</strong>.
