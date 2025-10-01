@@ -1,0 +1,78 @@
+/* Section Background */
+.review-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #734d78, #bfa2db);
+  text-align: center;
+  color: #fff;
+}
+
+/* Section Title */
+.review-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Cards Container */
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Review Card */
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 25px;
+  width: 320px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+  color: #fff;
+}
+
+/* Hover Effect */
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  border: 2px solid #ffcc00;
+}
+
+/* Review Header */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-bottom: 15px;
+}
+
+.review-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Star Rating */
+.review-rating .star {
+  color: #ffcc00;
+  margin-left: 3px;
+  font-size: 1rem;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+
+/* Review Date */
+.review-date {
+  font-size: 0.85rem;
+  color: #dcdcdc;
+  font-style: italic;
+}

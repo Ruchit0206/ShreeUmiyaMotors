@@ -10,6 +10,7 @@ import Services from '../Services/Services';
 import AboutUs from '../AboutUs/Aboutus';
 import ContactUs from '../ContactUs/ContactUs';
 import { Link } from 'react-router-dom';
+import ReviewsSection from '../Review/review';
 
 export default function Home() {
   const aboutSectionRef = useRef(null);
@@ -61,13 +62,17 @@ export default function Home() {
 
       <div ref={aboutSectionRef} className="scroll-section">
         <AboutUs disableHelmet={true} />
+
       </div>
+       <Services disableHelmet={true} />
+        <BuyingSteps />
 
       <PopularModels disableHelmet={true}/>
-      <BuyingSteps />
+     
       <ImageGallery disableHelmet={true}/>
       {/* <OurVehicles  disableHelmet={true}/> */}
-      <Services disableHelmet={true} />
+      <ReviewsSection></ReviewsSection>
+     
       <ContactUs  disableHelmet={true}/>
     </div>
   );
