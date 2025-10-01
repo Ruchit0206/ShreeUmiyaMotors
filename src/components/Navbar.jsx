@@ -45,7 +45,6 @@ const Navbar = () => {
                 Company
               </a>
               <ul className="dropdown-menu">
-                <li><Link to="/underdevelopment" className="dropdown-item" onClick={closeMobileMenu}>News</Link></li>
                 <li><Link to="/success" className="dropdown-item" onClick={closeMobileMenu}>Success Stories</Link></li>
                 <li><Link to="/underdevelopment" className="dropdown-item" onClick={closeMobileMenu}> Team</Link></li>
               </ul>
