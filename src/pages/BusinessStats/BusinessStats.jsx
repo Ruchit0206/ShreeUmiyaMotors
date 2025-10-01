@@ -5,7 +5,7 @@ import "./BusinessStats.css";
 const stats = [
   {
     icon: <FaCalendarCheck />,
-    value: "2+",
+    value: "3+",
     label: "Years Experinece",
   },
   {
