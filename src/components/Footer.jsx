@@ -113,8 +113,8 @@ const Footer = () => {
       <p className="footer-bottom">
         © {new Date().getFullYear()} Shree Umiya Motors. All rights reserved.
       </p>
-      <p className="footer-bottom">
-        Designed & Developed by{" "}
+      <p className="footer-bottom1">
+        Conceptualized, Designed & Developed by{" "}
         <a
           href="https://www.linkedin.com/in/ruchit-patel-7093b4257/"
           target="_blank"

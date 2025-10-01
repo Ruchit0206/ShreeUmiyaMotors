@@ -185,3 +185,10 @@
 .model-card {
   position: relative;
 }
+
+.visitmore{
+  font-size: larger;
+  display: block;
+  margin-top:10px;
+  color:white;
+}

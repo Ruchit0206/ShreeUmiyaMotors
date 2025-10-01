@@ -144,7 +144,6 @@ const PopularModels = ({ disableHelmet = false }) => {
       <p className="subtitle">
         Celebrate with Our Best-Selling Models, perfect for every occasion.
       </p>
-
       <div className="models-grid">
         {models.map((model) => (
           <div className="model-card" key={model.id}>
@@ -165,8 +164,16 @@ const PopularModels = ({ disableHelmet = false }) => {
               <p>{model.description1}</p>
               <p>{model.description2}</p>
             </div>
+            
           </div>
+          
+
         ))}
+<br/>
+      </div>
+      <div className="visitmore">
+        
+<p>For More Vehicles Visit Official Website &nbsp;<a href="https://www.baxymobility.com/passenger" rel="noopener noreferrer" target="_blank">Click Here</a> </p>
       </div>
 
       {selectedModel && (
